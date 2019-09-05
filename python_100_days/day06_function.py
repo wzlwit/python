@@ -14,6 +14,10 @@ def roll_dice(n=2):
     return total
 
 def add(*args):
+    if len(args) == 0:
+        return 0
+    # withouth the above, there will be an error for add(). 
+
     total = 0
     for val in args:
         total += val

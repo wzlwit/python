@@ -11,7 +11,7 @@ print(str2[2:])  # c123456
 print(str2[2::2])  # c246
 print(str2[::2])  # ac246
 print(str2[::-1])  # 654321cba
-print(str2[-3:-1])  # 45
+print(str2[-3:-1])  #! 45 (end exclusive) 
 # 检查字符串是否由数字构成
 print(str2.isdigit())  # False
 # 检查字符串是否以字母构成
