@@ -11,18 +11,30 @@ print(str2[2:])  # c123456
 print(str2[2::2])  # c246
 print(str2[::2])  # ac246
 print(str2[::-1])  # 654321cba
-print(str2[-3:-1])  #! 45 (end exclusive) 
+print(str2[-3:-1])  # ! 45 (end exclusive)
+
 # 检查字符串是否由数字构成
 print(str2.isdigit())  # False
+
 # 检查字符串是否以字母构成
-print(str2.isalpha())  # False
+print(str2.isalpha())  # False　
+
 # 检查字符串是否以数字和字母构成
 print(str2.isalnum())  # True
 str3 = '  jackfrued@126.com '
+
 print(str3)
 # 获得字符串修剪左右两侧空格的拷贝
 print(str3.strip())
 
+#* literal representation of Str
+print( repr('small')) #! quote included
+print(eval("'small'")) #! seems 'small' are typed into the INTERPRETER
+print(str("small"))
+print("'small'")
+print('"small"')
+print('\tsmall')
+print("\tsmall")
 
 # list
 list1 = [1, 3, 5, 7, 100]
@@ -31,32 +43,43 @@ list2 = ['hello']*5
 list1.append(200)
 list1.insert(1, 400)
 list1 += [1000, 2000]
-print(list1)
-print(len(list1))
-#remove element
-list1.remove(3)
+list1 += [3000]  # ? only operatable with LIST
+print('list1: ', list1)
+print('Length of List1: ', len(list1))
+# remove element
+print('Remove(3): ', list1.remove(3))
 if 1234 in list1:
     list1.remove(1234)
 del list1[0]
-print(list1)
+print('List1: ', list1)
 # clear a list
 list1.clear()
 
 
-#* using range to create a list
+# * using range to create a list
 f = [x for x in range(1, 10)]
 print(f)
+# ? like table multiplication /Cross Join
 f = [x + y for x in 'ABCDE' for y in '1234567']
 print(f)
-
 # yield
+
+del f[0]
+
+f = range(1, 10)    #Just create a range
+print(f)
+
+for x in f:
+    print(x)
+
 def fib(n):
     a, b = 0, 1
     for _ in range(n):
         a, b = b, a + b
         yield a
 
-#* tuple
+
+# * tuple
 t = ('骆昊', 38, True, '四川成都')
 print(t)
 # 获取元组中的元素
@@ -83,7 +106,7 @@ fruits_tuple = tuple(fruits_list)
 print(fruits_tuple)
 #! tuple not changable
 
-#* set
+# * set
 set1 = {1, 2, 3, 3, 3, 2}
 print(set1)
 print('Length =', len(set1))
@@ -91,11 +114,11 @@ set2 = set(range(1, 10))
 print(set2)
 set1.add(4)
 set1.add(5)
-set2.update([11, 12]) #add elements of an array to the set
+set2.update([11, 12])  # add elements of an array to the set
 print(set1)
 print(set2)
 set2.discard(5)
-if 4 in set2: #! in
+if 4 in set2:  # ! in
     set2.remove(4)
 print(set2)
 
@@ -126,7 +149,7 @@ print(set1 >= set3)
 # print(set1.issuperset(set3))
 
 
-#* dictionary (key: valure pair)
+# * dictionary (key: valure pair)
 scores = {'骆昊': 95, '白元芳': 78, '狄仁杰': 82}
 # 通过键可以获取字典中对应的值
 print(scores['骆昊'])
