@@ -27,16 +27,18 @@ print(str3)
 # 获得字符串修剪左右两侧空格的拷贝
 print(str3.strip())
 
-#* literal representation of Str
-print( repr('small')) #! quote included
-print(eval("'small'")) #! seems 'small' are typed into the INTERPRETER
+# * literal representation of Str
+print(repr('small'))  # ! quote included
+print(eval("'small'"))  # ! 'small' are typed into the INTERPRETER
 print(str("small"))
 print("'small'")
 print('"small"')
 print('\tsmall')
 print("\tsmall")
 
-# list
+
+print("\n\n======== LIST ========\n")
+
 list1 = [1, 3, 5, 7, 100]
 list2 = ['hello']*5
 
@@ -55,6 +57,7 @@ print('List1: ', list1)
 # clear a list
 list1.clear()
 
+print("\n\n======== RANGE ========\n")
 
 # * using range to create a list
 f = [x for x in range(1, 10)]
@@ -66,11 +69,12 @@ print(f)
 
 del f[0]
 
-f = range(1, 10)    #Just create a range
+f = range(1, 10)  # Just create a range
 print(f)
 
 for x in f:
     print(x)
+
 
 def fib(n):
     a, b = 0, 1
@@ -79,7 +83,8 @@ def fib(n):
         yield a
 
 
-# * tuple
+print("\n\n======= TUPLE ========\n")
+
 t = ('骆昊', 38, True, '四川成都')
 print(t)
 # 获取元组中的元素
@@ -89,7 +94,7 @@ print(t[3])
 for member in t:
     print(member)
 # 重新给元组赋值
-# t[0] = '王大锤'  # TypeError
+# * t[0] = '王大锤'  # TypeError
 # 变量t重新引用了新的元组原来的元组将被垃圾回收
 t = ('王大锤', 20, True, '云南昆明')
 print(t)
@@ -106,14 +111,16 @@ fruits_tuple = tuple(fruits_list)
 print(fruits_tuple)
 #! tuple not changable
 
-# * set
-set1 = {1, 2, 3, 3, 3, 2}
+print('\n\n======== SET ========\n')
+
+set1 = {3, 1, 2, 3, 3, 3, 2}
 print(set1)
 print('Length =', len(set1))
 set2 = set(range(1, 10))
 print(set2)
 set1.add(4)
 set1.add(5)
+# set1.add([7,8]) #! cannot add a List
 set2.update([11, 12])  # add elements of an array to the set
 print(set1)
 print(set2)
@@ -127,7 +134,8 @@ for elem in set2:
 print()
 
 set3 = set((1, 2, 3, 3, 2, 1))
-print(set3.pop())
+print("Set3: ", set3)
+print(set3.pop()) #! set.pop() removes the last value been updated
 print(set3)
 # 集合的交集、并集、差集、对称差运算
 print(set1 & set2)
@@ -136,7 +144,7 @@ print(set1 | set2)
 # print(set1.union(set2))
 print(set1 - set2)
 # print(set1.difference(set2))
-print(set1 ^ set2)
+print("Symmetric Difference: ",set1 ^ set2)
 # print(set1.symmetric_difference(set2))
 # 判断子集和超集
 print(set2 <= set1)
@@ -148,7 +156,7 @@ print(set1 >= set2)
 print(set1 >= set3)
 # print(set1.issuperset(set3))
 
-
+print("\n\n======== DICTIONARY ========")
 # * dictionary (key: valure pair)
 scores = {'骆昊': 95, '白元芳': 78, '狄仁杰': 82}
 # 通过键可以获取字典中对应的值

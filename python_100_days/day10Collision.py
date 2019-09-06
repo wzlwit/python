@@ -62,7 +62,7 @@ class Ball(object):
     def draw(self, screen):
         """在窗口上绘制球"""
         pygame.draw.circle(screen, self.color,
-                           (self.x, self.y), self.radius, 0)
+        (self.x, self.y), self.radius, 0)
 
 def main():
     # 定义用来装所有球的容器
