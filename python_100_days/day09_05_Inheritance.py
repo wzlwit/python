@@ -64,34 +64,14 @@ class Teacher(Person):
     def teach(self, course):
         print('%s%s正在讲%s.' % (self._name, self._title, course))
 
-
-from abc import ABCMeta, abstractmethod
-from random import randint, randrange
-
-
-class Pet(object, metaclass=ABCMeta): #! abstract class / method
-    """宠物"""
-
-    def __init__(self, nickname):
-        self._nickname = nickname
-
-    @abstractmethod
-    def make_voice(self):
-        """发出声音"""
-        pass
+def main():
+    stu = Student('王大锤', 15, '初三')
+    stu.study('数学')
+    stu.watch_av()
+    t = Teacher('骆昊', 38, '砖家')
+    t.teach('Python程序设计')
+    t.watch_av()
 
 
-class Dog(Pet):
-    """狗"""
-
-    def make_voice(self):
-        print('%s: 汪汪汪...' % self._nickname)
-
-
-class Cat(Pet):
-    """猫"""
-
-    def make_voice(self):
-        print('%s: 喵...喵...' % self._nickname)
-
-
+if __name__ == '__main__':
+    main()
