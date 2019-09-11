@@ -1,4 +1,4 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod #abstract class, can only be inheritated, not instaitatiaable
 
 
 class Pet(object, metaclass=ABCMeta):
