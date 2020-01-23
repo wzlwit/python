@@ -1,9 +1,9 @@
+# from html.parser import HTMLParser
 import io
 import sys
-import time
 import requests
-# from html.parser import HTMLParser
 import re
+# import time
 from datetime import date
 
 fTemp = "C:/WebInfo/temp.html"
