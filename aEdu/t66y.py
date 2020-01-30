@@ -18,7 +18,7 @@ def animation():
     up = 1
     # for i in range(up,up+325):
 
-    for i in range(up, up+2):
+    for i in range(up, up+3):
         num = i
         url = "{}/thread0806.php?fid=5&search=&page={}".format(root, num)
         print(url)
@@ -41,17 +41,17 @@ def animation():
         # print(len(h3s))
         # print(len(dates))
 
-        for n, h3 in enumerate(h3s):
-            suffix = re.search("[./]?无码.*MP4[./]?[0-9MGB.]*", h3)
+        for n, h3 in enumerate(h3s):5
+            suffix = re.search("[./]?无码.*MP4[./]?[0-9MGB.]+", h3)
             if suffix:
                 suffix = suffix.group(0)
                 # print(suffix)
                 title = h3[66:-9].replace('「', '').replace('」', "").split(")")[-1].split("]")[-1].replace(suffix, '').replace("[","").strip()
 
                 size = suffix.split("/")[-1]
-                mPos = size.find('M')
-                if mPos > 0:
-                    size = "{0:.3f}GB".format(int(size[:mPos-1])/1024)
+                # mPos = size.find('M')
+                # if mPos > 0:
+                #     size = "{0:.3f}GB".format(int(size[:mPos])/1024)
 
                 titleL = open(f, 'r').read()
 
@@ -69,7 +69,7 @@ def foreign():
     f = "C:/WebInfo/t66y_for.csv"
     
     up = 1
-    for i in range(up, up+2):
+    for i in range(up, up+3):
         num = i
         url = "{}/thread0806.php?fid=4&search=&page={}".format(root, num)
         print(url)
