@@ -41,7 +41,7 @@ def animation():
         # print(len(h3s))
         # print(len(dates))
 
-        for n, h3 in enumerate(h3s):5
+        for n, h3 in enumerate(h3s):
             suffix = re.search("[./]?无码.*MP4[./]?[0-9MGB.]+", h3)
             if suffix:
                 suffix = suffix.group(0)
