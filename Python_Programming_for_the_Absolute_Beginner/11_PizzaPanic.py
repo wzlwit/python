@@ -8,7 +8,7 @@ games.init(screen_width=640, screen_height=480, fps=50)
 
 class Pan(games.Sprite):
     """A pan controlled by player to catch falling pizzas."""
-    image = games.load_image("pan.bmp")
+    image = games.load_image("pan.bmp")     # NOTE: Static/Class varieble
 
     def __init__(self):
         """ Initialize Pan object and create Text object for score. """
