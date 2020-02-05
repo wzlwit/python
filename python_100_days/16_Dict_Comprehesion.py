@@ -11,3 +11,7 @@ prices = {
 # 用股票价格大于100元的股票构造一个新的字典
 prices2 = {key: value for key, value in prices.items() if value > 100}
 print(prices2)
+
+
+# 5 Examples Using Dict Comprehension in Python
+# https://cmdlinetips.com/2018/01/5-examples-using-dict-comprehension/
