@@ -23,7 +23,7 @@ class C(A):
 
 
 class D(B, C):
-    pass
+    pass    # *: default constructor is from the closest parent.
 
 # output:
 """
