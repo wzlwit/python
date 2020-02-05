@@ -39,7 +39,20 @@ class E(B, C):
         C.__init__(self)
         B.__init__(self)
 
+# output
+"""
+Enter C's __init__()
+In A's __init__()
+Leave C's __init__()
+Enter B's __init__()
+In A's __init__()
+Leave B's __init__()
+(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+"""
+
 d = D()
 print()
 e = E()
+print(d.__class__.__mro__)
 print(d.__class__.__mro__)
