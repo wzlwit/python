@@ -11,8 +11,9 @@ def select_sort(origin_items, comp=lambda x, y: x < y):
 
 
 def bubble_sort(origin_items, comp=lambda x, y: x > y):
-    """高质量冒泡排序(搅拌排序)"""
-    #* double direction / bi-direction
+    """高质量冒泡排序(搅拌排序)""" 
+    # * double direction / bi-direction
+    """ COCKTAIL SHAKER sort """
     items = origin_items[:]
     for i in range(len(items) - 1):
         swapped = False
@@ -32,7 +33,7 @@ def bubble_sort(origin_items, comp=lambda x, y: x > y):
 
 
 def merge_sort(items, comp=lambda x, y: x <= y):
-    """归并排序(分治法)""" # Recursion
+    """归并排序(分治法)"""  # Recursion
     if len(items) < 2:
         return items[:]
     mid = len(items) // 2
@@ -53,32 +54,9 @@ def merge(items1, items2, comp):
         else:
             items.append(items2[index2])
             index2 += 1
-    items += items1[index1:]
+    items += items1[index1:]    # NOTE: slice can detect empty element. if index1 >= len(), then it will add []
     items += items2[index2:]
     return items
-
-
-def seq_search(items, key):
-    """顺序查找"""
-    for index, item in enumerate(items):
-        if item == key:
-            return index
-    return -1
-
-
-def bin_search(items, key):
-    # * only for ordered list
-    """折半查找"""
-    start, end = 0, len(items) - 1
-    while start <= end:
-        mid = (start + end) // 2
-        if key > items[mid]:
-            start = mid + 1
-        elif key < items[mid]:
-            end = mid - 1
-        else:
-            return mid
-    return -1
 
 
 def quick_sort(origin_items, comp=lambda x, y: x <= y):
@@ -104,3 +82,26 @@ def _partition(items, start, end, comp):
             items[i], items[j] = items[j], items[i]
     items[i + 1], items[end] = items[end], items[i + 1]
     return i + 1
+
+
+def seq_search(items, key):
+    """顺序查找"""
+    for index, item in enumerate(items):
+        if item == key:
+            return index
+    return -1
+
+
+def bin_search(items, key):
+    # * only for ordered list
+    """折半查找"""
+    start, end = 0, len(items) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if key > items[mid]:
+            start = mid + 1
+        elif key < items[mid]:
+            end = mid - 1
+        else:
+            return mid
+    return -1
