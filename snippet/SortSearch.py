@@ -12,7 +12,7 @@ def select_sort(origin_items, comp=lambda x, y: x < y):
 
 def bubble_sort(origin_items, comp=lambda x, y: x > y):
     """高质量冒泡排序(搅拌排序)"""
-    #* double direction    
+    #* double direction / bi-direction
     items = origin_items[:]
     for i in range(len(items) - 1):
         swapped = False
@@ -32,7 +32,7 @@ def bubble_sort(origin_items, comp=lambda x, y: x > y):
 
 
 def merge_sort(items, comp=lambda x, y: x <= y):
-    """归并排序(分治法)"""
+    """归并排序(分治法)""" # Recursion
     if len(items) < 2:
         return items[:]
     mid = len(items) // 2
@@ -42,6 +42,7 @@ def merge_sort(items, comp=lambda x, y: x <= y):
 
 
 def merge(items1, items2, comp):
+    # for ORDERED collections
     """合并(将两个有序的列表合并成一个有序的列表)"""
     items = []
     index1, index2 = 0, 0
