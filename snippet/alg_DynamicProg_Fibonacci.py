@@ -8,6 +8,8 @@ def fib(num, temp={}):
     """用递归计算Fibonacci数"""
     if num in (1, 2):
         return 1
+
+    # NOTE: decrease Repeated Calculation
     try:
         return temp[num]
     except KeyError:
