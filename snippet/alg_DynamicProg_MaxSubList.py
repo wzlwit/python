@@ -7,10 +7,13 @@
 def mssl(l, max=True):
     if max:
         m = 'Max'
-        def comp(x, y): return x > y
+        def comp(x, y): return x > y    #* first Match
+        # def comp(x, y): return x >= y   #* last Match
+        
     else:
         m = 'Min'
         def comp(x, y): return x < y        # * find MINIMUM
+        # def comp(x, y): return x <= y
 
     best = cur = l[0]
     curi = starti = 0
@@ -27,8 +30,8 @@ def mssl(l, max=True):
         if comp(cur, best):
             starti, besti, best = curi, i+1, cur
 
-    return (m, best, [starti, besti],l[starti:besti])
-    # return {m: best, 'Index': [starti, besti], 'Sub': l[starti:besti]}
+    # return (m, best, [starti, besti],l[starti:besti])
+    return {m: best, 'Index': [starti, besti], 'Sub': l[starti:besti]}
 
 
 # ref:
@@ -45,7 +48,7 @@ def ms(items):
 
 def main():
     # L = list(map(int, input().split()))
-    L1 = 1, -2, 3, 5, -3, 2, 4, -2, -8, 5, -2, 7, 7, 2, -6, 5
+    L1 = 1, -2, 3, 5, -3, 2, 4, -2, -8, 8, -8, 5, -2, 7, 7, 2, -6, 5
     L2 = -10, -2, -3, -5, -3, -2, -4, -2, -8, -5, -2, -7, -7, -2, -6, -5
     # ms(L1)
     print(mssl(L1, False))
