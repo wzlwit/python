@@ -26,7 +26,9 @@ def mssl(l, max=True):
 
         if comp(cur, best):
             starti, besti, best = curi, i+1, cur
-    return {m: best, 'Index': [starti, besti], 'Sub': l[starti:besti]}
+
+    return (m, best, [starti, besti],l[starti:besti])
+    # return {m: best, 'Index': [starti, besti], 'Sub': l[starti:besti]}
 
 
 # ref:
