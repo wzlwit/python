@@ -1,6 +1,6 @@
 ## 面向对象相关知识
 
-- 三大支柱：封装、继承、多态
+- 三大支柱：封装(encapsulation)、继承(inheritance)、多态(polymorph)
 
     例子：工资结算系统。
 
@@ -87,9 +87,9 @@
 
 - 类与类之间的关系
 
-    - is-a关系：继承
-    - has-a关系：关联 / 聚合 / 合成
-    - use-a关系：依赖
+    - is-a关系：继承(inheritance/derivation)
+    - has-a关系：关联(association) / 聚合(aggregation) / 合成(composition)
+    - use-a关系：依赖(dependence)
 
     例子：扑克游戏。
 

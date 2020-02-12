@@ -13,6 +13,7 @@ def singletonize(cls):
 
     return wrap
 
+#* Closure is used in the above
 
 @singleton
 class President():

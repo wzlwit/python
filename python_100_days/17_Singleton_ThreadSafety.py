@@ -16,3 +16,5 @@ def singletonize(cls):
         return instances[cls]
 
     return wrap
+
+#* Closure is used in the above
