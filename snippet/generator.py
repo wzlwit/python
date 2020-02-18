@@ -1,0 +1,1 @@
+# Generator stores ALGORITH
