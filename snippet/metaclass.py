@@ -1,4 +1,4 @@
-###* whose instance is a class *###
+#*  its instance is a class *#
 
 
 class ListMetaclass(type):
@@ -10,6 +10,7 @@ class ListMetaclass(type):
 
 
 class MyList(list, metaclass=ListMetaclass):
+    # the 'metaclass' param is the magic
     # parent class: list
     pass
 
@@ -20,7 +21,8 @@ print(L)
 # [1]
 
 
-""" ORM: Object Relational Mapping """
+""" ORM: Object Relational Mapping """  # converting data between incompatible type systems using object-oriented programming languages
+# https://en.wikipedia.org/wiki/Object-relational_mapping
 
 
 class Field(object):
