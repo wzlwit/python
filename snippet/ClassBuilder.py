@@ -6,6 +6,9 @@
 #   Created : 02/10 10:30:41 2017
 ###############################################
 
+# http://rootkiter.com/2017/02/25/Python_ClassBuilder.html
+
+
 TYPE_U16 = 'u16'
 TYPE_U32 = 'u32'
 TYPE_STR = 'str'
