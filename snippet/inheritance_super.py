@@ -54,6 +54,5 @@ Leave C's __init__()
 Leave B's __init__()
 (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <type 'object'>)
 ————————————————
-版权声明：本文为CSDN博主「执假以为真」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/nirendao/article/details/48863215
 """
