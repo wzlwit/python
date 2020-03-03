@@ -48,6 +48,7 @@ class IntegerField(Field):
 
 
 class ModelMetaclass(type):
+    # Table MetalClass
 
     def __new__(cls, name, bases, attrs):
         if name == 'Model':
@@ -70,6 +71,7 @@ class Model(dict, metaclass=ModelMetaclass):
     def __init__(self, **kw):
         super(Model, self).__init__(**kw)
 
+    # * override
     def __getattr__(self, key):
         try:
             return self[key]
@@ -86,6 +88,7 @@ class Model(dict, metaclass=ModelMetaclass):
         for k, v in self.__mappings__.items():
             fields.append(v.name)
             params.append('?')
+            # * getattr() is an built-in python function, which invokes  __getattr__()
             args.append(getattr(self, k, None))
         sql = 'insert into %s (%s) values (%s)' % (
             self.__table__, ','.join(fields), ','.join(params))
