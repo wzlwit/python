@@ -1,7 +1,7 @@
 # 简介Python之super的用法及原理
 # https://blog.csdn.net/nirendao/article/details/48863215
 
-# NOTE:  super() more likely make diamond inheritance into a linear inheritance. 
+# NOTE:  super() more likely make diamond inheritance with a sturcture of linear inheritance. 
 
 """ 
 def super(cls, inst):
