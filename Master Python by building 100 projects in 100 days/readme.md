@@ -1,0 +1,2 @@
+[Master Python by building 100 projects in 100 days. Learn to build websites, games, apps, web scraping and data science!](https://mtygroup.udemy.com/course/100-days-of-code/learn/lecture/17824302?start=0#overview)
+-Dr. Angela Yu
